@@ -49,7 +49,6 @@ submit_log <- function(){
                         stringsAsFactors = FALSE)
   write.csv(log_tbl, file = temp, row.names = FALSE)
   write.csv(log_tbl, file = "temp.csv", row.names = FALSE)
-  temp.df <- data.frame("temp.csv")
   read_sheet(ss = temp)
   #  encoded_log <- base64encode(temp)
   # browseURL(paste0(pre_fill_link, encoded_log))
