@@ -26,7 +26,7 @@ getLog <- function(){
 submit_log <- function(){
   
   # Please edit the link below
-  pre_fill_link <- "https://docs.google.com/forms/d/e/1FAIpQLSe8WhJxrelMm-Gb1TYzK48ExqpBPq1MZPrkVfABu38Tu3eclg/viewform?usp=pp_url"
+  pre_fill_link <- "https://docs.google.com/spreadsheets/d/1aPtsK_kaaBIqueCFnW7lH-5rUXRj4v-Jz6D4aeY3dok/edit?usp=sharing"
   
   # Do not edit the code below
   if(!grepl("=$", pre_fill_link)){
@@ -48,6 +48,8 @@ submit_log <- function(){
                         datetime = p(log_$datetime, nrow_, NA),
                         stringsAsFactors = FALSE)
   write.csv(log_tbl, file = temp, row.names = FALSE)
-  encoded_log <- base64encode(temp)
-  browseURL(paste0(pre_fill_link, encoded_log))
+  write.csv(log_tbl, file = "temp.csv", row.names = FALSE)
+  write_sheet()
+  #  encoded_log <- base64encode(temp)
+  # browseURL(paste0(pre_fill_link, encoded_log))
 }
