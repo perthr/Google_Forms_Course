@@ -50,7 +50,7 @@ submit_log <- function(){
   # write.csv(log_tbl, file = temp, row.names = FALSE)
   # write.csv(log_tbl, file = "temp.csv", row.names = FALSE)
   # temp.df <- data.frame(temp)
-  ss <- gs4_create(name = "Besty_Bob2", sheets = c(1:20)
+  ss <- gs4_create(name = "Besty_Bob2", sheets = c(1:20))
   sheet_write(log_tbl, ss)
   # encoded_log <- base64encode(temp)
   # browseURL(paste0(pre_fill_link, encoded_log))
