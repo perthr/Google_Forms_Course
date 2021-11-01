@@ -1,2 +1,4 @@
 base64enc
 googlesheets4
+magrittr
+tidyverse
