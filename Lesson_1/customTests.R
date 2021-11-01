@@ -52,7 +52,7 @@ submit_log <- function(){
   # temp.df <- data.frame(temp)
   # ss <- gs4_browse(pre_fill_link)
   ss = gs4_browse(pre_fill_link)
-  sheet_append(ss, log_tbl, sheet = 1
+  sheet_append(ss, log_tbl, sheet = 1)
   # encoded_log <- base64encode(temp)
   # browseURL(paste0(pre_fill_link, encoded_log))
 }
