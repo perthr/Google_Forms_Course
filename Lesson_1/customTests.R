@@ -26,7 +26,7 @@ getLog <- function(){
 submit_log <- function(){
   
   # Please edit the link below
-  pre_fill_link <- "https://docs.google.com/spreadsheets/d/1OKe35mjkGPjOP0od_K0J_wIl8gZiWO1-U064ii1Hpcg/edit?usp=sharing"
+  pre_fill_link <- "https://docs.google.com/spreadsheets/d/1dZ53ijEIgbYfsD2K8a-_3am_AKnpoDTEQn9UZnhS9yc/edit?usp=sharing"
   
   # Do not edit the code below
   if(!grepl("=$", pre_fill_link)){
@@ -52,7 +52,7 @@ submit_log <- function(){
   # temp.df <- data.frame(temp)
   # ss <- gs4_browse(pre_fill_link)
   ss = gs4_browse(pre_fill_link)
-  sheet_write(log_tbl, ss = ss)
+  sheet_append(ss, log_tbl, sheet = 1
   # encoded_log <- base64encode(temp)
   # browseURL(paste0(pre_fill_link, encoded_log))
 }
